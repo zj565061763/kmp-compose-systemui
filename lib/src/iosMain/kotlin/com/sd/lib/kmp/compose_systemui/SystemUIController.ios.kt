@@ -10,9 +10,7 @@ import platform.UIKit.setStatusBarStyle
 
 @Composable
 internal actual fun rememberStatusBarController(): SystemUIController {
-  return remember {
-    StatusBarController()
-  }
+  return remember { StatusBarController() }
 }
 
 private class StatusBarController : SystemUIController {
