@@ -10,9 +10,7 @@ import androidx.compose.runtime.staticCompositionLocalOf
 internal val LocalSystemUI = staticCompositionLocalOf<SystemUI?> { null }
 
 @Composable
-fun SystemUI(
-  content: @Composable () -> Unit,
-) {
+fun SystemUI(content: @Composable () -> Unit) {
   val localSystemUI = LocalSystemUI.current
   if (localSystemUI != null) {
     content()

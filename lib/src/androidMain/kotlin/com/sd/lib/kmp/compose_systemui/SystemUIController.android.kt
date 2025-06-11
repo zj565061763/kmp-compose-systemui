@@ -7,8 +7,6 @@ import android.view.View
 import android.view.Window
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.window.DialogWindowProvider
 import androidx.core.view.ViewCompat
@@ -19,9 +17,7 @@ import androidx.core.view.WindowInsetsCompat
 internal actual fun rememberStatusBarController(): SystemUIController {
   val view = LocalView.current
   val window = findWindow()
-  return remember(view, window) {
-    StatusBarController(view, window)
-  }
+  return remember(view, window) { StatusBarController(view, window) }
 }
 
 private abstract class BaseSystemUIController(
@@ -95,8 +91,3 @@ private tailrec fun Context.findWindow(): Window? =
     is ContextWrapper -> baseContext.findWindow()
     else -> null
   }
-
-private fun transformColorForLightContent(color: Color): Color {
-  val blackScrim = Color(0f, 0f, 0f, 0.3f) // 30% opaque black
-  return blackScrim.compositeOver(color)
-}

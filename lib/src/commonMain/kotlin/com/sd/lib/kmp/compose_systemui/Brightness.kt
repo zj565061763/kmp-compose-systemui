@@ -38,9 +38,9 @@ private abstract class LastStack<T> {
     }
   }
 
-  fun lastOrNull(): T? = _holder.lastOrNull()
-
   private fun notifyLastItemChanged() = onLastItemChanged(lastOrNull())
+
+  private fun lastOrNull(): T? = _holder.lastOrNull()
 
   abstract fun onLastItemChanged(item: T?)
 }
