@@ -36,9 +36,6 @@ kotlin {
     commonMain.dependencies {
       implementation(compose.foundation)
     }
-    commonTest.dependencies {
-      implementation(libs.kmp.kotlin.test)
-    }
   }
 }
 
