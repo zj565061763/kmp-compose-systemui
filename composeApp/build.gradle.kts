@@ -48,10 +48,10 @@ kotlin {
 
 android {
   namespace = "com.sd.demo.kmp.compose_systemui"
-  compileSdk = 34
+  compileSdk = 35
   defaultConfig {
     minSdk = 21
-    targetSdk = 34
+    targetSdk = 35
     applicationId = "com.sd.demo.kmp.compose_systemui"
     versionCode = 1
     versionName = "1.0"

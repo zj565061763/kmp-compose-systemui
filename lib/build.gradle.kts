@@ -41,7 +41,7 @@ kotlin {
 
 android {
   namespace = "com.sd.lib.kmp.compose_systemui"
-  compileSdk = 34
+  compileSdk = 35
   defaultConfig {
     minSdk = 21
   }
