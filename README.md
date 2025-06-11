@@ -7,5 +7,5 @@ Compose Multiplatform system ui library.
 # Gradle
 
 ```kotlin
-implementation("io.github.zj565061763.kmp:compose-systemui:1.0.0-alpha01")
+implementation("io.github.zj565061763.kmp:compose-systemui:1.1.0-alpha01")
 ```
